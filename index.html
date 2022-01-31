@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body {
+        } 
+        @media screen and (min-width: 601px) {
+    body {
+      font-size: 15px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    body {
+      font-size: 10px;
+    }
+  } 
+        </style>
+    <link rel="stylesheet" href="css.css">
+    <title>calc</title>
+</head>
+<body>
+<div id="all">
+<input id="num1" type="number" placeholder="Число 1" />
+
+<div id="operator_btns">
+    <button id="plus" onclick="op='+'">+</button>
+    <button id="minus" onclick="op='-'">-</button>
+    <button id="times" onclick="op='*'">x</button>
+    <button id="divide" onclick="op='/'">:</button>
+  </div>
+
+<input id="num2" type="number" placeholder="Число 2" />
+</div>
+<br>
+<div id="cc">
+<button id="c" onclick="func()">Посчитать</button>
+<button id="clear">Очистить</button>
+</div>
+<script>
+document.getElementById("clear").onclick = function(e) {
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    document.getElementById("result").innerHTML = "";
+}
+</script>
+<script>
+    var op; 
+  
+    function func() {
+      var result;
+      var num1 = Number(document.getElementById("num1").value);
+      var num2 = Number(document.getElementById("num2").value);
+      switch (op) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        case '/':
+          result = num1 / num2;
+          break;
+      }
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+  <p id="result"></p>
+</body>
+</html>

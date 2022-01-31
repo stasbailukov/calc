@@ -1,0 +1,49 @@
+*{
+    margin: 0.25em;
+}
+body{
+    text-decoration: none;
+    background-color: rgb(66, 66, 66);
+}
+button {
+    font-size: 2em;
+    color: white;
+    border-radius: 0.5em;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+    width: 2em;
+    height: 2em;
+  } 
+  button:hover { background: rgb(53, 167, 110); }
+  button:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+  }
+  #c{
+      width: 6em;
+    
+  }
+  #clear{
+      width: 6em;
+  }
+  input{
+      width: 6em;
+      height: 2em;
+      font-size: 2em;
+      border-radius: 0.5em;
+  }
+  #all{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+  #cc{
+      display: flex;
+  }
+  p{
+      font-size: 2em;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
